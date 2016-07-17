@@ -1,0 +1,43 @@
+# readMe
+
+<br>
+<br>
+
+## Step 0
+The requirements to run this script are checked. Notably, it is checked whether the user of this R script has the required packages to run this script. In this script it is required to have the **"reshape2"** package. If the user does not have this package, the script will automatically install this package for the user.
+
+Afterwards, it is checked whether the user has the required dataset. If the dataset is not found on the user's working directory. The R script will download the file from the internet and unzip the file in the working directory.
+
+If the user does have the required packages and the required dataset available on his/her working directory. This step is not executed.
+
+Now the user is set to continue with the R script.
+
+The R script will continue to import all the required txt files for the remainder of the script.
+<br>Notably, it will import the following txt files:
+
+* features.txt
+* subject_train.txt
+* X_train.txt
+* y_train.txt
+* subject_test.txt
+* X_test.txt
+* y_test.txt
+* activity_labels.txt
+
+The features txt file contains all the features of the different variables.
+<br>The activity_labels txt file contains the meaning of all the y values.
+
+## STEP 1
+The different train and test datasets (subjects, x and y) are merged together. 
+<br>Furthermore, the appropriate headers are provided for all the variables in the datasets.
+
+## STEP 2/3
+We only pertain the variables where mean and std data are presented. Furthermore, we also pertain the subject and activity variables. The column names are adapted to be slightly more readable.
+
+## STEP 4
+The activity values (obtained from the y txt files) are coded. To have more meaningfulness, these codes are replaced by the appropriate labels from the descriptive variables. These values are obtained from **activity_labels.txt**. The dataset created thus far is clean. It is designated as "complete_data" in the R environment.
+
+## STEP 5
+A second tidy dataset is created. This dataset contains the average of each variable for each activity and each subject.
+<br>The data is being reformatted through the functions **melt** and **dcast** from the **reshape2** package.
+<br>This new dataset (in the R environment designated as "tidy_data") is now exported to the user's working directory.

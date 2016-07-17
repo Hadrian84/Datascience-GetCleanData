@@ -1,0 +1,41 @@
+# Data collection
+This data was collected during a study of 30 individuals instructed to wear a smartphone equipped with an accelerometer and gyroscope while performing six different activities. The device sensors recorded a variety of measurements, a subset of which will be described in the section **Variables**
+
+# Variables
+The dataset is generated using the script run_analysis.R which can be found in this GitHub repository.
+<br>Notably, the cleaned dataset contains mean and standard deviations of the different measurements.
+<br>The variable names were replaced by more sensible names found in UCI HAR Dataset/**features.txt**. These names provide more information on what each variable means.
+<br>The feature still are relatively abstract, thus these were modified accordingly:
+
+* feature names were devoid of punctuations;
+* mean and std are now with first capital letters.
+
+The dataset contains 68 variables (including "subject" and "activity").
+
+# (Summary) description of variables
+<br>Variables designated with **(XYZ)** have data on each of the axes in space seperately.
+<br> Variables designated with **(Mean-Std)** have data concerning the Mean and the Standard Deviation.
+<br>t-index stands for time domain signal.
+<br>f-index stands for Fast Fourier transformation.
+
+* subject: each subject that is represented in the study. There are 30 subjects in total.
+* activity: the activity that the subject is performing, values are: "walking", "sitting", "standing", "laying", "walking_downstairs", or "walking_upstairs".
+
+* tBodyAcc (XYZ) (Mean-Std): Mean and Standard deviation of the Body Acceleration time domain signal for each axis. 
+* tGravityAcc (XYZ) (Mean-Std): Mean and Standard deviation of the Gravity Acceleration time domain signal for each axis.
+* tBodyAccJerk (XYZ) (Mean-Std): Mean and Standard deviation of the Body Acceleration Jerk time domain signal for each axis.
+* tBodyGyro (XYZ) (Mean-Std): Mean and Standard deviation of the Body Gyroscope time domain signal for each axis.
+* tBodyGyroJerk (XYZ) (Mean-Std): Mean and Standard deviation of the Body Gyroscope Jerk time domain signal for each axis.
+* tBodyAccMag (Mean-Std): Mean and Standard deviation of the Body Acceleration Magnitude time domain signal.
+* tGravityAccMag (Mean-Std: Mean and Standard deviation of the Gravity Acceleration Magnitude time domain signal.
+* tBodyAccJerkMag (Mean-Std): Mean and Standard deviation of the Body Acceleration Jerk Magnitude time domain signal.
+* tBodyGyroMag (Mean-Std): Mean and Standard deviation of the Body Gyro Magnitude time domain signal.
+* tBodyGyroJerkMag (Mean-Std): Mean and Standard deviation of the Body Gyro Jerk Magnitude time domain signal.
+
+* fBodyAcc (XYZ) (Mean-Std): Mean and Standard deviation of the Fast Fourier Transform of the Body Acceleration for each axis.        
+* fBodyAccJerk (XYZ) (Mean-Std): Mean and Standard deviation of the Fast Fourier Transform of the Body Acceleration Jerk for each axis.
+* fBodyGyro (XYZ) (Mean-Std): Mean and Standard deviation of the Fast Fourier Transform of the Body Gyro for each axis.
+* fBodyAccMag (Mean-Std): Mean and Standard deviation of the Fast Fourier Transform of the Body Acceleration Magnitude.
+* fBodyBodyAccJerkMag (Mean-Std): Mean and Standard deviation of the Fast Fourier Transform of the Body Body Acceleration Jerk Magnitude.
+* fBodyBodyGyroMag (Mean-Std): Mean and Standard deviation of the Fast Fourier Transform of the Body Body Gyro Magnitude.
+* fBodyBodyGyroJerkMag (Mean-Std): Mean and Standard deviation of the Fast Fourier Transform of the Body Body Gyro Jerk Magnitude.
